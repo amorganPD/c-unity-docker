@@ -1,0 +1,6 @@
+tests/src/test_main.c:17:test_addExample_try1_1_Expect2:PASS
+tests/src/test_main.c:32:test_getPINstatus_tryDependencyMock:PASS
+
+-----------------------
+2 Tests 0 Failures 0 Ignored 
+OK

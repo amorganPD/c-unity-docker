@@ -1,0 +1,12 @@
+# Build Directories
+app/_test_build/depends
+app/_test_build/objs
+
+# File Types
+*.o
+*.lst
+*.pbi.xcl
+*.pbd
+*.pbi
+*.cout
+*.dep
