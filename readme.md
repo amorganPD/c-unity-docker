@@ -1,9 +1,19 @@
 # C Unity Test Framework Docker start project
 
-- To get started, clone https://github.com/ThrowTheSwitch/Unity/ into a directory next to the parent directory of this repository
+## Dependencies
+Docker needs to be installed on the host machine
 
 ## Usage
-- Under `tests/src` name the file Test_<`filename_undertest`>.c
-  - The makefile will search the directory for any .c or .h file that matches <`filename_undertest`>
-- Ensure your Unity directory path is correct within the makefile for variable `PATHUNITY`
+- The makefile automatically search for the source files that match the name for any file starting with `Test_` in the `tests/src` directory
+  - File under test: `app/starterExample.c`
+  - Test File: `app/tests/srcTest_starterExample.c`
+
+Run
+```
+./build.sh
+```
+Once built, run
+```
+./run_tests.sh
+```
 

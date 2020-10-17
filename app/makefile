@@ -30,7 +30,7 @@ PATHBUILD = _test_build/
 PATHDEPENDS = _test_build/depends/
 PATHOBJ = _test_build/objs/
 PATHRESULTS = _test_build/results/
-PATHUNITY = ../../Unity/src/
+PATHUNITY = /Unity/src/
 PATHTESTSRC = tests/src/
 PATHINC = $(subst inc,inc/,$(subst ./,-I,$(shell find . -type d -name 'inc')))
 
@@ -44,11 +44,9 @@ PATHINC_BOARD = -I../board/
 PATHINC_DEPS = $(PATHINC_BOARD)
 
 # Source File of Dependencies
-# SRC_DEPENDS = ./../src/example.c
-# ./../src/example.c \
+SRC_DEPENDS = ./tests/inc/Mock_gpio.c
 # Objects of Dependencies
-# OBJ_DEPENDS = $(PATHOBJ)example.o
-# $(PATHOBJ)example.o \
+OBJ_DEPENDS = $(PATHOBJ)Mock_gpio.o
 
 # END - Project dependent ----------------------------------
 
@@ -65,7 +63,7 @@ OBJ = $(addprefix $(PATHOBJ), $(subst .c,.o,$(SRC_NAMEONLY)))
 SRC_UNITY = $(wildcard $(PATHUNITY)*.c)
 OBJ_UNITY = $(patsubst $(PATHUNITY)%.c, $(PATHOBJ)%.o, $(SRC_UNITY))
 
-# Combin all source and object lists
+# Combine all source and object lists
 SOURCES = $(PATHTESTSRC)test_main.c  $(SRC_DEPENDS) $(SRC_OFTESTS) $(SRC) $(SRC_UNITY)
 OBJECTS = $(PATHOBJ)test_main.o $(OBJ_DEPENDS) $(OBJ_OFTESTS) $(OBJ) $(OBJ_UNITY)
 

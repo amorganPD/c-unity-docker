@@ -1,20 +1,24 @@
 #include "starterExample.h"
 
 #include "test_main.h"
-#include "Mock_gpio.c"
 
 /*** START - Declarations - addExample ***/
 void addExample_TestRunner(void);
 void test_addExample_try1_1_Expect2(void);
+void test_addExample_try65536_65536_Expect0(void);
 
 // Tests - addExample
 void test_addExample_try1_1_Expect2(void) {
   TEST_ASSERT_EQUAL_UINT32(2, addExample(1, 1));
 }
+void test_addExample_try65536_65536_Expect0(void) {
+  TEST_ASSERT_EQUAL_UINT32(0, addExample(65536, 65536));
+}
 
 // Test Runner - addExample
 void addExample_TestRunner(void) {
   RUN_TEST(test_addExample_try1_1_Expect2);
+  RUN_TEST(test_addExample_try65536_65536_Expect0);
 }
 /*** END - addExample ***/
 
