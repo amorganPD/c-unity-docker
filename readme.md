@@ -4,9 +4,9 @@
 Docker needs to be installed on the host machine
 
 ## Usage
-- The makefile automatically search for the source files that match the name for any file starting with `Test_` in the `tests/src` directory
+- The makefile automatically search for the source files that match the name for any file starting with `Test_` in the `tests/src` directory, example:
   - File under test: `app/starterExample.c`
-  - Test File: `app/tests/srcTest_starterExample.c`
+  - Test File: `app/tests/src/Test_starterExample.c`
 
 Run
 ```
